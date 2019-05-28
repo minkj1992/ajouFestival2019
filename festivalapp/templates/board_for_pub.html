@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div id="main">
+    <div class="form_box">
+        <form action="{{pubpost.id}}" method="POST">     
+            <!-- action 추가 필요 -->
+            {% csrf_token %}
+            <h2>게시물 올리기</h3>
+            <input class="input_field" type="text" placeholder="부스명" name="author"><br>
+            <input class="input_field" type="password" placeholder="소속 단체" name="password"><br>
+            <textarea class="textarea_field" placeholder="부스소개" name="content"></textarea><br>
+            
+            <!-- 1. 부스명
+2. 소속 단체
+*3. 위치 
+*4. 날짜 
+*5. 주간/야간 
+6. 부스 소개
+7. 이미지 -->
+            <button class="write_button">게시</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock content %}

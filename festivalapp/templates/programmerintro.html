@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<style>
+    @font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+    #main{
+        background-image: linear-gradient(to top, #434343 0%, black 100%);
+    }
+    
+    #title_container{
+      display: flex;
+       width: 100%;
+       height: 400px;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       background-image: linear-gradient(to top, black 0%, #434343 100%);
+            }
+        
+        @media screen and (max-width: 700px) {
+
+            #title_container{
+                padding-top: 100px;
+            }
+            .programmerintro_board{
+                justify-content: center;
+                flex-direction: column;
+            }
+            #back-end{
+                margin-top: 100px; 
+            }
+        }
+
+    #content{
+        text-align: center;
+    }
+    
+    .programmerintro_board{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 10px 10px 10px;
+        padding: 40px 40px 40px 40px;
+        justify-content: space-around;
+    }
+
+    #front-end{
+        text-align: center;
+    }
+    #back-end{
+        text-align: center;
+    }   
+
+
+    .board_title {
+        text-align: center;
+        text-shadow: 4px 4px 0px #1565C0;
+    }
+
+    .photo{
+        width: 250px;
+        height: 350px;
+        margin-top: 40px;
+        background-color: aliceblue;
+        text-align: center;
+        box-shadow: 5px 5px 3px #1565C0;
+    }
+    
+</style>
+
+
+<div id="main">
+    <div id = "title_container">
+        <div id = "content">
+            <p style ="font-family: 나눔스퀘어; font-size: 20pt; font-weight: 300; color: white;" >아주대 멋쟁이 사자처럼 7기</p>  
+            <h1 style ="font-family: 나눔스퀘어; font-size: 40pt; font-weight: 700; color: white; letter-spacing: 10px; margin-bottom: 0;" class="board_title">개발자 소개</h1>
+            <img src="{%static 'images/line.png' %}" width="300px">
+        </div>
+    </div>
+
+    <div class = "programmerintro_board">
+        <div id = "front-end">
+            <p style=" font-family: S-CoreDream-8Heavy; font-size: 35px; font-weight: 400; color: #d1b4f5; margin-bottom: 0;" class="board_title ">Front-End</p>
+            <img src="{%static 'images/line_f.png' %}" width="190px" height="5px">
+            <div id="photo_board1">
+                <div class="photo">
+                    <img src="{%static 'images/photo_kcb.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                    <p style="font-size: 20pt; margin: 0;">김청빈</p>
+                    <p style="font-size: 12pt">아주대학교 미디어학과</p>
+                </div>
+                
+                <div class="photo">
+                        <img src="{%static 'images/photo_jys.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">전영선</p>
+                        <p style="font-size: 12pt">아주대학교 산업공학과</p>
+                </div>
+
+                <div class="photo">
+                        <img src="{%static 'images/photo_ksj.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">김수진</p>
+                        <p style="font-size: 12pt">아주대학교 소프트웨어학과</p>
+                </div>
+
+                <div class="photo">
+                        <img src="{%static 'images/photo_kyj.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">김윤중</p>
+                        <p style="font-size: 12pt">아주대학교 이비즈니스학과</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id = "back-end">
+            <p style=" font-family: S-CoreDream-8Heavy; font-size: 35px; font-weight: 400; color: #b7caf3; margin-bottom: 0" class="board_title ">Back-End</p>
+            <img src="{%static 'images/line_b.png' %}" width="190px" height="5px">
+            <div id="photo_board1">
+                <div class="photo">
+                        <img src="{%static 'images/photo_kyk.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">김영국</p>
+                        <p style="font-size: 12pt">아주대학교 소프트웨어학과</p>
+                </div>
+
+                <div class="photo">
+                        <img src="{%static 'images/photo_ls.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">이선우</p>
+                        <p style="font-size: 12pt">아주대학교 금융공학과</p>
+                </div>
+
+                <div class="photo">
+                        <img src="{%static 'images/photo_hsj.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">허수지</p>
+                        <p style="font-size: 12pt">아주대학교 소프트웨어학과</p>
+                </div>
+
+                <div class="photo">
+                        <img src="{%static 'images/photo_kdy.jpg' %}" width="230px" height="230px" style="margin: 10px;">
+                        <p style="font-size: 20pt; margin: 0;">김도연</p>
+                        <p style="font-size: 12pt">아주대학교 소프트웨어학과</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+       <p style="text-align: center; padding: 50px; color: gray; font-size: 9pt;">아주대학교 멋쟁이 사자처럼 7기</p>
+    </footer>
+
+</div>
+
+{% endblock content %}

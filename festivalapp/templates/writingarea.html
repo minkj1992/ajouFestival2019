@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<!-- Nav -->
+<nav id="nav">
+    <ul>
+        <li><a href="{%url 'home'%}#timetable">공연시간</a></li>
+        <li><a href="{%url 'home'%}#lineup">라인업</a></li>
+        <li><a href="{%url 'home'%}#map">지도</a></li>
+        <li><a href="{%url 'pubintro' 1 %}" class="active">주점소개</a></li>
+        <li><a href="{%url 'shareboard'%}">합석</a></li>
+    </ul>
+</nav>
+
+<div id="main">
+
+    <h2 style="text-align: center;">주점 소개하기 예시</h2>
+    <div style="display: flex; justify-content: space-around;">
+        <div>
+            <img src=" {% static 'images/poster_demo.jpg' %}" vspace="40" hspace="40" width="200px" height="300px"
+                alt="포스터">
+        </div>
+        <div style="text-align: center;">안녕하세요 저희는 멋쟁이 사자 부스입니다.<br>
+            1. 제육볶음<br>
+            2. 오징어 땅콩<br><br>
+            을 팝니다.
+        </div>
+    </div>
+
+
+
+    <!-- 내용을 수정하고 싶다면 admin 계정으로 들어가서 수정 -->
+
+    <div class="form_box">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            부스 이름:
+            <input class="input_field" type="text" placeholder="부스이름을 입력해주세요." name="name"><br>
+            간단한 부스 소개와 메뉴 :
+            <textarea class="textarea_field" placeholder="내용을 입력해주세요." name="description"></textarea><br>
+            구역:
+            <fieldset>
+                <input id="section_a" type="radio" name="section" value="섹션 A">
+                <label for="section_a">섹션A</label>
+                <input id="section_b" type="radio" name="section" value="섹션 B">
+                <label for="section_b">섹션B</label>
+                <input id="section_c" type="radio" name="section" value="섹션 C">
+                <label for="section_c">섹션c</label>
+            </fieldset>
+
+            위치:
+            <input class="input_field" type="text" placeholder="위치을 입력해주세요." name="location"><br>
+            
+            주간/야간:
+            <fieldset>
+                <input id="time_day" type="radio" name="time" value="주간">
+                <label for="time_day">주간</label>
+                <input id="time_night" type="radio" name="time" value="야간">
+                <label for="time_night">야간</label>
+            </fieldset>
+
+            날짜:
+            <fieldset>
+                <input id="date_1" type="checkbox" name="date1" value=1>
+                <label for="date_1">1일차</label>
+                <input id="date_2" type="checkbox" name="date2" value=1>
+                <label for="date_2">2일차</label>
+                <input id="date_3" type="checkbox" name="date3" value=1>
+                <label for="date_3">3일차</label>
+            </fieldset>            
+            
+            <input type="file" name="picture" accept="image/x-png,image/gif,image/jpeg"><br>
+
+            <input type="submit" value="submit" />
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+
+
+<div style="height: 60px;">
+	<h1>.</h1>
+</div>
+
+<!-- Main -->
+<div id="main">
+
+	<!-- 공연시간 -->
+	<section id="timetable" class="main">
+		<div class="spotlight">
+			<div class="content">
+				<header class="major">
+					<h2>공연시간</h2>
+				</header>
+			</div>
+		</div>
+
+		<div id="date-select" style="display: flex; justify-content: space-around;">
+
+			<ul id="list-day">
+				<li class="active" onclick="day1();" style="list-style-type: none; border: 1px solid #bcbcbc; padding: 10px; margin: 10px; border-radius:10px;">Day1</li>
+				<li onclick="day2();" style="list-style-type: none; border: 1px solid #bcbcbc; padding: 10px; margin: 10px; border-radius:10px;">Day2</li>
+				<li onclick="day3();" style="list-style-type: none; border: 1px solid #bcbcbc; padding: 10px; margin: 10px; border-radius:10px;">Day3</li>
+			</ul>
+
+		</div>
+
+		<div id="performorder">
+			
+			<table id="timetable1" class="timetable" style="font-size: 13px;">
+				<thead>
+					<tr>
+						<th scope="cols">Time</th>
+						<th scope="cols">Content</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th scope="row">5:50 PM ~ 6:36 PM</th>
+						<td>끼콘테스트 1부 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">6:41 PM ~ 7:17 PM</th>
+						<td>끼콘테스트 2부 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">7:26 PM ~ 7:59 PM</th>
+						<td>늑대야 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">8:06 PM ~ 8:21 PM</th>
+						<td>BEAT 공연</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table id="timetable2" class="timetable" style="font-size: 13px;">
+				<thead>
+					<tr>
+						<th scope="cols">Time</th>
+						<th scope="cols">Content</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th scope="row">6:20 PM ~ 7:01 PM</th>
+						<td>응원 대제전 1부<br>인하대 찬조공연</td>
+					</tr>
+					<tr>
+						<th scope="row">7:01 PM ~ 7:35 PM</th>
+						<td>응원 대제전 2부<br>한체대 찬조공연</td>
+					</tr>
+					<tr>
+						<th scope="row">7:35 PM ~ 8:30 PM</th>
+						<td>응원 대제전 3부</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table id="timetable3" class="timetable" style="font-size: 13px;">
+				<thead>
+					<tr>
+						<th scope="cols">Time</th>
+						<th scope="cols">Content</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th scope="row">5:50 PM ~ 7:11 PM</th>
+						<td>밴드 공연<br>CAPO Moss 5분쉼표 <br>스파이더스 안현숙밴드</td>
+					</tr>
+					<tr>
+						<th scope="row">7:11 PM ~ 7:29 PM</th>
+						<td>제니스 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">7:29 PM ~ 7:46 PM</th>
+						<td>미디올로지 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">7:46 PM ~ 8:06 PM</th>
+						<td>SOUL 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">8:06 PM ~ 8:21 PM</th>
+						<td>BEAT 공연</td>
+					</tr>
+					<tr>
+						<th scope="row">8:21 PM ~ 8:50 PM</th>
+						<td>마스터피스 공연</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<!-- 라인업 -->
+	<section id="lineup" class="main special">
+		<header class="major">
+			<h1 style="color: black; font-weight:900;">LINE UP</h1>
+		</header>
+		<div class="lineup">
+			<div id = "Wedlineup" style ="display: flex; justify-content: center;flex-wrap: wrap;">
+				<img src="{% static 'images/demo_1.png' %}" width="250px" height="250px" style="margin-bottom: 30px; margin-right: 30px;" alt=""/>
+					<div class = "photoTitle">
+						<img src="{% static 'images/photo_1.png' %}" width="250px" height="250px" alt="photo_1"/>
+						<p>볼빨간 사춘기</p>
+						<img src="{% static 'images/photo_2.png' %}" width="250px" height="250px" alt="photo_2"/>
+						<p>MFBTY</p>
+					</div>
+			</div>
+			<div id = "Thulineup" style ="display: flex; justify-content: center; flex-wrap: wrap;">
+				<img src="{% static 'images/demo_2.png' %}" width="250px" height="250px" style="margin-bottom: 30px; margin-right: 30px;" alt=""/>
+					<div class = "photoTitle">
+						<img src="{% static 'images/photo_3.png' %}" width="250px" height="250px" alt="photo_3"/>
+						<p>우주소녀</p>
+						<img src="{% static 'images/photo_4.png' %}" width="250px" height="250px" alt="photo_4"/>
+						<p>허각</p>
+					</div>
+			</div>
+			<div id = "Frilineup" style ="display: flex; justify-content: center;flex-wrap: wrap;">
+					<img src="{% static 'images/demo_3.png' %}" width="250px" height="250px" style="margin-bottom: 30px; margin-right: 30px;" alt=""/>
+					<div class = "photoTitle">
+						<img src="{% static 'images/photo_5.png' %}" width="250px" height="250px" alt="photo_5"/>
+						<p>싸이</p>
+					</div>
+			</div>	
+		</div>
+	</section>
+
+	<!-- 지도 -->
+	<section id="map" class="main special">
+		<header class="major">
+			<h2>지도</h2>
+			<img src="{% static 'images/map.png' %}" style = "max-width: calc(100%)"  alt="map"/>
+		</header>
+		
+	</section>
+	<section id="dd" class="main special">
+	
+	
+	</section>
+</div>
+
+
+<script type="text/javascript">
+
+	window.onload = pageLoad;
+	function pageLoad(){
+		var today = new Date();
+		var dd = today.getDate();
+		if(dd == 29) {
+			$('#timetable1').show();
+			$('#timetable2').hide();
+			$('#timetable3').hide();
+		}
+		else if(dd == 30) {
+			$('#timetable1').hide();
+			$('#timetable2').show();
+			$('#timetable3').hide();    
+		}
+		else if(dd == 31) {
+			$('#timetable1').hide();
+			$('#timetable2').hide();
+			$('#timetable3').show();
+		}
+		else {
+			$('#timetable1').show();
+			$('#timetable2').hide();
+			$('#timetable3').hide();
+		}
+		
+	};
+
+	function day1() {
+		// alert("btn1");
+		$('#timetable1').show();
+		$('#timetable2').hide();
+		$('#timetable3').hide();
+	}
+
+	function day2() {
+		// alert("btn2");
+		$('#timetable1').hide();
+		$('#timetable2').show();
+		$('#timetable3').hide();
+	}
+
+	function day3() {
+		// alert("btn3");
+		$('#timetable1').hide();
+		$('#timetable2').hide();
+		$('#timetable3').show();
+	}
+
+</script>
+
+
+{% endblock content %}
