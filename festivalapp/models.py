@@ -13,11 +13,11 @@ class Post(models.Model):
     is_finish = models.IntegerField(default=0)
 
 class Pub(models.Model):
-    name = models.CharField('title',max_length=150,default="")
+    name = models.CharField('title',max_length=100,default="")
     description =  models.TextField('description')
-    section = models.CharField(max_length = 100)
-    location = models.CharField(max_length = 100)
-    time = models.CharField(max_length = 100)
+    section = models.CharField(max_length = 2)
+    location = models.CharField(max_length = 10)
+    time = models.CharField(max_length = 10)
     # date = models.CharField(max_length = 10)
     # image_booth = models.FileField(null=True, blank=True)
     date1 = models.IntegerField(default=0)
