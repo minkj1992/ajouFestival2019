@@ -9,9 +9,9 @@
 
 
 <div id="main">
-    <div
-        style="padding-top: 50px; float:left; display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
-        <h1>부스 안내</h1>
+    <div class="row justify-content-center" style="padding-top: 50px; float:left; display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+        <h1 class="text-center">부스 안내</h1>
+
         <div>
             <img src=" {% static 'images/day_map1.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;">
         </div>
@@ -19,12 +19,25 @@
             <img src=" {% static 'images/day_map2.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;">
         </div>
         <div>
-            <img src=" {% static 'images/day_map3.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;">
+            <img src=" {% static 'images/day_map3.jpg' %}" alt="아주대지도" style="height: auto;display: block; max-width: 100%;">
         </div>
         <div>
             <img src=" {% static 'images/night_map.png' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;"
                 id="publist">
         </div>
+        <div>
+            <img src=" {% static 'images/night_map1.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;"
+                id="publist">
+        </div>
+        <div>
+            <img src=" {% static 'images/night_map2.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;"
+                id="publist">
+        </div>
+        <div>
+            <img src=" {% static 'images/night_map3.jpg' %}" alt="아주대지도" style="max-width: calc(100%); padding: 10px;"
+                id="publist">   
+        </div>
+
         <!--<a href="{%url 'writingarea'%}" style= "color : blueviolet">주점 소개</a>-->
         <a href="{%url 'writingpw'%}" class="button" style="display: inline-block; color : blueviolet">주점 소개</a>
     </div>
@@ -67,3 +80,4 @@
 </div>
 
 {% endblock content %}
+
